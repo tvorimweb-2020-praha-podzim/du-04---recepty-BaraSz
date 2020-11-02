@@ -53,7 +53,7 @@ notebook/pc:
 .recept-meta {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
+    /*padding: 0.5rem;*/
     font-size:0.8rem;
     font-weight: 400;
 }
@@ -62,51 +62,65 @@ notebook/pc:
         min-height: 200px; 
     }
 
-.hlavni-recept>.recept-nazev {
+.hlavni-recept .recept-nazev {
         font-size: 1.75rem;
     }
 
 h2 {
     font-weight: 800;
     font-size: 1.2rem;
-    position: absolute;
+    /*position: absolute;
     bottom: 0.5rem;
-    left: 0.5rem;
-}
-
-.hlavni-recept,
-.recept.recept2, 
-.recept.recept3,
-.recept.recept4,
-.recept.recept5 {
-    background-size: cover;
-    background-position: 0 50%;
-    position: relative;
-    border-bottom: 0.1rem solid #ffff;
+    left: 0.5rem;*/
+    text-shadow: 0 0 0.5px #000;
+    
     
 }
 
-.recept.recept2, 
-.recept.recept3,
-.recept.recept4,
-.recept.recept5 {
+/*Thank you very much for this advice! Just to be sure that I understood it correctly: if there is a dash between words (in the name of a class), it counts as "1 word", but if there is gap it counts as 2 words and I can "separate it"? (hope it is understandable :) )
+
+Change display:flex instead of position:absolut was really tricky for me :D I would like to ask you - is there any other / simplier way how to change it? (First I changed .recept to display:flex / colums and after that I changed .recept meta to display:flex / row) I tried to make .recepty display:flex / row and somehow take h2 and align it to the bottom left - but it did not work. Thank you !*/
+
+.hlavni-recept,
+.recept {
+    background-size: cover;
+   background-position: 50%;
+   /* position: relative;*/
+   display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #ffff;
+    padding: 0.5rem;
+    
+}
+
+
+.recept {
     min-height: 90px;
 }
 
 .recept.recept2 {
-    background-image:url("images/sushi.jpg");
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)),
+    url("images/sushi.jpg");
 }
 
 .recept.recept3 {
-        background-image:url("images/rajcata.jpg");
+        background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)),
+        url("images/rajcata.jpg");
 }
 
 .recept.recept4 {
-    background-image:url("images/kure.jpg");
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)),
+    url("images/kure.jpg");
 }
 
 .recept.recept5 {
-        background-image:url("images/grilovani.jpg");
+        background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)),
+        url("images/grilovani.jpg");
 }
 
 
@@ -129,25 +143,26 @@ h2 {
         flex-basis: 100%; 
     }
 
-.recept-meta {
+/*.recept-meta {
     padding: 1.25rem;
-}
+}*/
 
 
-.hlavni-recept>.recept-nazev {
+.hlavni-recept .recept-nazev {
         font-size: 2rem;
     }
 
-.recept-nazev {
+h2 {
     font-size: 1.5rem;
-    bottom: 1.25rem;
-    left: 1.25rem;
+    /*bottom: 1.25rem;
+    left: 1.25rem;*/
 }
 
-.recept.recept2, 
-.recept.recept3,
-.recept.recept4,
-.recept.recept5 {
+.hlavni-recept,
+.recept {
+    padding: 1.25rem;
+}
+.recept {
     min-height: 150px;
 }
 
@@ -173,23 +188,18 @@ border-right: 0.1rem solid #ffff;
             flex-grow: 1;
             min-height: 400px;
             flex-basis: calc(100%/3);
+            border-right: 0.1rem solid #ffff;
         }
     
-
-    
-    
-    .hlavni-recept>.recept-nazev {
+    .hlavni-recept .recept-nazev {
             font-size: 3rem;
         }
     
-    .recept-nazev {
+    h2 {
         font-size: 1.75rem;
     }
     
-    .recept.recept2, 
-    .recept.recept3,
-    .recept.recept4,
-    .recept.recept5 {
+    .recept {
         min-height: 200px;
     }
     
